@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .submit {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to PHP Programming</h1>
+
+    <form method="post" onsubmit="generateFibonacciSeries(); return false;">
+        <input type="number" name="number" id="number" min="1" required placeholder="Enter the Fibo Series you want to generate">
+        <input type="submit" class="submit" value="Generate">
+    </form>
+
+    <div id="output"></div>
+
+    
+    <script src="fiboseries.js"></script>
+</body>
+</html>
