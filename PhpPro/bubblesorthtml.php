@@ -29,20 +29,20 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Get the array size (n) from the form
+       
         $n = (int)$_POST["n"];
 
-        // Get array elements from the form and split them into an array
+       
         $inputElements = $_POST["arr_elements"];
         $arr = preg_split("/\r\n|\n|\r/", $inputElements);
 
-        // Convert array elements to integers
+        /
         $arr = array_map('intval', $arr);
 
-        // Sort the array
+        
         $sortedArray = bubbleSort($arr, $n);
 
-        // Display the sorted array
+        
         echo "Sorted Array: " . implode(", ", $sortedArray);
     }
     ?>

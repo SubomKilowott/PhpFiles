@@ -35,20 +35,20 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Get the input values from the form and split them into an array
+        
         $inputValues = $_POST["input_values"];
         $valuesArray = explode(",", $inputValues);
 
-        // Remove leading/trailing whitespace from each value
+        
         $valuesArray = array_map("trim", $valuesArray);
 
-        // Remove empty values
+        
         $valuesArray = array_filter($valuesArray);
 
-        // Sort the array
+        
         $sortedArray = selectionSort($valuesArray);
 
-        // Display the sorted array
+       
         echo "Sorted Array: " . implode(", ", $sortedArray);
     }
     ?>
